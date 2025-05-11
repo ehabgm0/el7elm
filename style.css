@@ -5,22 +5,36 @@ body {
     padding: 0;
     direction: rtl;
     text-align: right;
+    line-height: 1.6; /* تحسين المسافة بين الأسطر */
 }
 
 header {
     background-color: #810077;
     color: white;
     padding: 20px;
+    text-align: center; /* توسيط النص */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل */
 }
 
 nav a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
+    font-weight: bold; /* جعل النص عريضًا */
+    transition: color 0.3s ease; /* تأثير عند التمرير */
+}
+
+nav a:hover {
+    color: #ffd700; /* تغيير اللون عند التمرير */
 }
 
 main {
     padding: 20px;
+    max-width: 800px; /* تحديد عرض المحتوى */
+    margin: auto; /* توسيط المحتوى */
+    background-color: #fff; /* خلفية بيضاء */
+    border-radius: 8px; /* زوايا مستديرة */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل */
 }
 
 footer {
@@ -28,33 +42,45 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    font-size: 14px; /* تصغير النص */
+    border-top: 3px solid #810077; /* خط علوي */
 }
+
 /* تنسيق الزر */
 button {
-  background-color: #4CAF50; /* اللون الأخضر */
-  color: white; /* النص باللون الأبيض */
-  border: none;
-  padding: 10px 20px; /* مسافة داخلية */
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px; /* جعل الزوايا مستديرة */
+    background-color: #4CAF50; /* اللون الأخضر */
+    color: white; /* النص باللون الأبيض */
+    border: none;
+    padding: 10px 20px; /* مسافة داخلية */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px; /* جعل الزوايا مستديرة */
+    transition: background-color 0.3s ease; /* تأثير عند التمرير */
 }
 
 /* عند المرور بالماوس فوق الزر */
 button:hover {
-  background-color: #45a049; /* تغيير اللون عندما يمر الماوس */
+    background-color: #45a049; /* تغيير اللون عندما يمر الماوس */
 }
 
 @media (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-  
-  button {
-    width: 100%;
-  }
+    body {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    main {
+        padding: 15px;
+    }
 }
