@@ -1,54 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    font-family: 'Poppins', Arial, sans-serif; /* خط حديث */
+    background: url('https://source.unsplash.com/1600x900/?galaxy,stars') no-repeat center center fixed; /* خلفية فضائية */
+    background-size: cover;
     margin: 0;
     padding: 0;
     direction: rtl;
     text-align: right;
-    line-height: 1.6; /* تحسين المسافة بين الأسطر */
+    line-height: 1.8; /* تحسين المسافة بين الأسطر */
+    color: #fff; /* النص باللون الأبيض */
 }
 
 header {
-    background-color: #810077;
+    background: linear-gradient(90deg, #4b0082, #810077); /* تدرج لوني فضائي */
     color: white;
     padding: 20px;
     text-align: center; /* توسيط النص */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* ظل أكثر وضوحًا */
+    text-shadow: 0 0 10px #ffd700; /* توهج للنص */
 }
 
 nav a {
-    color: white;
+    color: #ffd700; /* لون ذهبي */
     margin: 0 10px;
     text-decoration: none;
     font-weight: bold; /* جعل النص عريضًا */
-    transition: color 0.3s ease; /* تأثير عند التمرير */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* تأثير عند التمرير */
 }
 
 nav a:hover {
-    color: #ffd700; /* تغيير اللون عند التمرير */
+    color: #fff; /* تغيير اللون عند التمرير */
+    text-shadow: 0 0 10px #ffd700; /* توهج عند التمرير */
 }
 
 main {
     padding: 20px;
     max-width: 800px; /* تحديد عرض المحتوى */
     margin: auto; /* توسيط المحتوى */
-    background-color: #fff; /* خلفية بيضاء */
-    border-radius: 8px; /* زوايا مستديرة */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+    background: rgba(0, 0, 0, 0.8); /* خلفية شفافة */
+    border-radius: 12px; /* زوايا مستديرة */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* ظل أكثر وضوحًا */
+    color: #fff; /* النص باللون الأبيض */
 }
 
 footer {
-    background-color: #222;
+    background: linear-gradient(90deg, #222, #4b0082); /* تدرج لوني */
     color: white;
     text-align: center;
     padding: 10px;
     font-size: 14px; /* تصغير النص */
-    border-top: 3px solid #810077; /* خط علوي */
+    border-top: 3px solid #ffd700; /* خط علوي ذهبي */
+    text-shadow: 0 0 5px #ffd700; /* توهج للنص */
 }
 
 /* تنسيق الزر */
 button {
-    background-color: #4CAF50; /* اللون الأخضر */
+    background: linear-gradient(90deg, #4CAF50, #45a049); /* تدرج لوني للأزرار */
     color: white; /* النص باللون الأبيض */
     border: none;
     padding: 10px 20px; /* مسافة داخلية */
@@ -59,12 +65,14 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 8px; /* جعل الزوايا مستديرة */
-    transition: background-color 0.3s ease; /* تأثير عند التمرير */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* تأثير عند التمرير */
+    box-shadow: 0 0 10px #4CAF50; /* توهج */
 }
 
 /* عند المرور بالماوس فوق الزر */
 button:hover {
-    background-color: #45a049; /* تغيير اللون عندما يمر الماوس */
+    background: linear-gradient(90deg, #45a049, #4CAF50); /* عكس التدرج */
+    box-shadow: 0 0 15px #45a049; /* زيادة التوهج */
 }
 
 @media (max-width: 600px) {
