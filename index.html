@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>خدمة الأبحاث - فى حلوان</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -56,7 +57,7 @@
 <body>
   <header>
     <img src="logo.png" alt="لوجو الموقع" style="width: 150px; height: auto; display: block; margin: 0 auto;">
-    <h1>مرحباً بك فى مركز الحلم لعمل الابحاث</h1>
+    <h1>مرحباً بك فى مركز الحلم لعمل الأبحاث</h1>
     <p>خدمة عمل الأبحاث أونلاين (ابتدائي - إعدادي - ثانوي)</p>
   </header>
 
@@ -64,17 +65,16 @@
     <section class="intro">
       <h2>اطلب بحثك الآن بسهولة</h2>
       <p>نقدم خدمة إعداد الأبحاث الدراسية باحترافية وسرعة. اختر المرحلة، اكتب عدد الصفحات، وسنحسب لك السعر تلقائيًا. الدفع متاح عبر فودافون كاش وإنستا باي.</p>
-      <p>Order your research easily online! We provide academic research writing for all school levels. Choose your grade, number of pages, and see the price instantly. Payment via Vodafone Cash or InstaPay.</p>
     </section>
 
     <section class="form-section">
-      <h3>نموذج طلب بحث / Order Form</h3>
+      <h3><i class="fas fa-edit"></i> نموذج طلب بحث / Order Form</h3>
       <form id="orderForm">
         <label>الاسم / Name:</label>
-        <input type="text" name="name" required>
+        <input type="text" name="name" placeholder="أدخل اسمك" required>
 
         <label>رقم الواتساب / WhatsApp Number:</label>
-        <input type="tel" name="whatsapp" required>
+        <input type="tel" name="whatsapp" placeholder="أدخل رقم الواتساب" required>
 
         <label>المرحلة الدراسية / Education Level:</label>
         <select name="level" id="level">
@@ -84,10 +84,10 @@
         </select>
 
         <label>عنوان البحث / Research Title:</label>
-        <input type="text" name="title" required>
+        <input type="text" name="title" placeholder="أدخل عنوان البحث" required>
 
         <label>عدد الصفحات / Number of Pages:</label>
-        <input type="number" name="pages" id="pages" min="1" required>
+        <input type="number" name="pages" id="pages" min="1" placeholder="أدخل عدد الصفحات" required>
 
         <label>طريقة الدفع / Payment Method:</label>
         <select name="payment">
@@ -97,18 +97,18 @@
 
         <p id="priceOutput">السعر الإجمالي: 0 جنيه / Total Price: 0 EGP</p>
 
-        <button type="submit">إرسال عبر واتساب / Send via WhatsApp</button>
+        <button type="submit"><i class="fab fa-whatsapp"></i> إرسال عبر واتساب / Send via WhatsApp</button>
       </form>
     </section>
 
     <section class="follow-up">
-      <h3>متابعة الطلب / Order Follow-up</h3>
-      <p>لمتابعة طلبك، أرسل رقم الطلب على واتساب: <strong>201102012243</strong></p>
-      <p>To follow up on your order, send your order number to WhatsApp: <strong>201102012243</strong></p>
+      <h3><i class="fas fa-phone-alt"></i> متابعة الطلب / Order Follow-up</h3>
+      <p>لمتابعة طلبك، أرسل رقم الطلب على واتساب: <strong><i class="fab fa-whatsapp"></i> 201102012243</strong></p>
     </section>
   </main>
 
   <footer>
+    <p>&copy; 2025 مركز الحلم لعمل الأبحاث. جميع الحقوق محفوظة.</p>
   </footer>
 
   <script>
@@ -120,52 +120,3 @@
 
     const levelSelect = document.getElementById('level');
     const pagesInput = document.getElementById('pages');
-    const priceOutput = document.getElementById('priceOutput');
-
-    function updatePrice() {
-      const level = levelSelect.value;
-      const pages = parseInt(pagesInput.value) || 0;
-      const price = pages * levelPrices[level];
-      priceOutput.textContent = `السعر الإجمالي: ${price} جنيه / Total Price: ${price} EGP`;
-    }
-
-    levelSelect.addEventListener('change', updatePrice);
-    pagesInput.addEventListener('input', updatePrice);
-
-    document.getElementById('orderForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const name = form.name.value;
-      const whatsapp = form.whatsapp.value;
-      const level = form.level.options[form.level.selectedIndex].text;
-      const title = form.title.value;
-      const pages = form.pages.value;
-      const payment = form.payment.options[form.payment.selectedIndex].text;
-      const price = pages * levelPrices[form.level.value];
-
-      const message = `مرحبًا، أنا ${name}\nأرغب في طلب بحث:\n- المرحلة: ${level}\n- العنوان: ${title}\n- عدد الصفحات: ${pages}\n- طريقة الدفع: ${payment}\n- السعر المتوقع: ${price} جنيه`;
-      const encoded = encodeURIComponent(message);
-      window.open(`https://wa.me/201102012243?text=${encoded}`, '_blank');
-    });
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ar">
-    <form id="myForm">
-  <label for="email">البريد الإلكتروني:</label>
-  <input type="email" id="email" name="email">
-  <button type="submit">إرسال</button>
-</form>
-
-<script>
-  document.getElementById('myForm').onsubmit = function(e) {
-    e.preventDefault(); // منع الإرسال الفعلي
-    const email = document.getElementById('email').value;
-    if (email === "") {
-      alert("يرجى إدخال البريد الإلكتروني.");
-    } else {
-      alert("تم الإرسال بنجاح.");
-    }
-  }
-</script>
