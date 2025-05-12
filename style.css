@@ -1,94 +1,133 @@
+/* القواعد العامة */
 body {
-    font-family: 'Poppins', Arial, sans-serif; /* خط حديث */
-    background: url('https://source.unsplash.com/1600x900/?galaxy,stars') no-repeat center center fixed; /* خلفية فضائية */
+    font-family: 'Poppins', Arial, sans-serif;
+    background: url('https://source.unsplash.com/1600x900/?galaxy,stars') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
     direction: rtl;
     text-align: right;
-    line-height: 1.8; /* تحسين المسافة بين الأسطر */
-    color: #fff; /* النص باللون الأبيض */
+    line-height: 1.8;
+    color: #fff;
 }
 
 header {
-    background: linear-gradient(90deg, #4b0082, #810077); /* تدرج لوني فضائي */
+    background: linear-gradient(90deg, #4b0082, #810077);
     color: white;
     padding: 20px;
-    text-align: center; /* توسيط النص */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* ظل أكثر وضوحًا */
-    text-shadow: 0 0 10px #ffd700; /* توهج للنص */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px #ffd700;
 }
 
 nav a {
-    color: #ffd700; /* لون ذهبي */
+    color: #ffd700;
     margin: 0 10px;
     text-decoration: none;
-    font-weight: bold; /* جعل النص عريضًا */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* تأثير عند التمرير */
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 nav a:hover {
-    color: #fff; /* تغيير اللون عند التمرير */
-    text-shadow: 0 0 10px #ffd700; /* توهج عند التمرير */
+    color: #fff;
+    text-shadow: 0 0 10px #ffd700;
 }
 
 main {
     padding: 20px;
-    max-width: 800px; /* تحديد عرض المحتوى */
-    margin: auto; /* توسيط المحتوى */
-    background: rgba(0, 0, 0, 0.8); /* خلفية شفافة */
-    border-radius: 12px; /* زوايا مستديرة */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* ظل أكثر وضوحًا */
-    color: #fff; /* النص باللون الأبيض */
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    color: #fff;
 }
 
 footer {
-    background: linear-gradient(90deg, #222, #4b0082); /* تدرج لوني */
+    background: linear-gradient(90deg, #222, #4b0082);
     color: white;
     text-align: center;
     padding: 10px;
-    font-size: 14px; /* تصغير النص */
-    border-top: 3px solid #ffd700; /* خط علوي ذهبي */
-    text-shadow: 0 0 5px #ffd700; /* توهج للنص */
+    font-size: 14px;
+    border-top: 3px solid #ffd700;
+    text-shadow: 0 0 5px #ffd700;
 }
 
 /* تنسيق الزر */
 button {
-    background: linear-gradient(90deg, #4CAF50, #45a049); /* تدرج لوني للأزرار */
-    color: white; /* النص باللون الأبيض */
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    color: white;
     border: none;
-    padding: 10px 20px; /* مسافة داخلية */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    padding: 10px 20px;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 8px; /* جعل الزوايا مستديرة */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* تأثير عند التمرير */
-    box-shadow: 0 0 10px #4CAF50; /* توهج */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px #4CAF50;
 }
 
-/* عند المرور بالماوس فوق الزر */
 button:hover {
-    background: linear-gradient(90deg, #45a049, #4CAF50); /* عكس التدرج */
-    box-shadow: 0 0 15px #45a049; /* زيادة التوهج */
+    background: linear-gradient(90deg, #45a049, #4CAF50);
+    box-shadow: 0 0 15px #45a049;
 }
 
-@media (max-width: 600px) {
+/* استعلامات الوسائط */
+@media (max-width: 1200px) {
+    main {
+        max-width: 90%; /* تقليل العرض للأجهزة المتوسطة */
+    }
+
+    header {
+        padding: 15px; /* تقليل المسافة الداخلية */
+    }
+
+    footer {
+        font-size: 12px; /* تقليل حجم النص */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* تكبير النص للأجهزة اللوحية */
+    }
+
+    nav a {
+        font-size: 14px; /* تقليل حجم النص في الروابط */
+    }
+
+    button {
+        padding: 8px 16px; /* تقليل حجم الأزرار */
+    }
+}
+
+@media (max-width: 480px) {
     body {
         font-size: 14px;
     }
 
-    button {
-        width: 100%;
+    header {
+        text-align: center; /* توسيط النصوص */
+        padding: 10px;
     }
 
-    header {
-        padding: 15px;
+    nav a {
+        display: block; /* جعل الروابط على شكل قائمة */
+        margin: 5px 0; /* مسافات بين الروابط */
     }
 
     main {
-        padding: 15px;
+        padding: 10px;
+        max-width: 100%; /* جعل المحتوى بعرض الشاشة */
+    }
+
+    button {
+        width: 100%; /* جعل الأزرار بعرض الشاشة */
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 8px;
     }
 }
